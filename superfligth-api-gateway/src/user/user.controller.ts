@@ -4,7 +4,9 @@ import { UserDto } from "./dto/user.dto";
 import { Observable } from "rxjs";
 import { IUser } from "src/common/interfaces/user.interface";
 import { usermsg } from "src/common/constans";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("user")
 @Controller("api/v2/user")
 export class UserController {
   constructor(private readonly clientProxy: ClientPRoxySuperFlights) {}
