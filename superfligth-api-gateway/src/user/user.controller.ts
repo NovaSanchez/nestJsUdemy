@@ -14,6 +14,7 @@ export class UserController {
 
   @Post()
   create(@Body() UserDTO: UserDto): Observable<IUser> {
+    console.log('object');
     return this._clientProxyUser.send(usermsg.CREATE, UserDTO);
   }
 }
